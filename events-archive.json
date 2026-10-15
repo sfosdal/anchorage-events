@@ -1,0 +1,28 @@
+{
+ "events": [
+  {
+   "venue": "Sullivan Arena",
+   "title": "Anchorage Wolverines vs Minnesota Wilderness",
+   "date": "2026-10-09",
+   "time": "19:00:00",
+   "url": "https://tickets.anchoragewolverines.com/",
+   "type": "sports"
+  },
+  {
+   "venue": "Sullivan Arena",
+   "title": "Anchorage Wolverines vs Minnesota Wilderness",
+   "date": "2026-10-10",
+   "time": "19:00:00",
+   "url": "https://tickets.anchoragewolverines.com/",
+   "type": "sports"
+  },
+  {
+   "venue": "Sullivan Arena",
+   "title": "Anchorage Wolverines vs Minnesota Wilderness",
+   "date": "2026-10-11",
+   "time": "16:00:00",
+   "url": "https://tickets.anchoragewolverines.com/",
+   "type": "sports"
+  }
+ ]
+}
