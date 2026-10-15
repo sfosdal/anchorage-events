@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="6" fill="#1b2733"/>
+  <!-- the Chugach front range over the inlet under a ribbon of aurora -->
+  <path d="M2 10 Q9 4 16 9 T30 8" stroke="#3ddc97" stroke-width="2.2" fill="none" stroke-linecap="round" opacity=".9"/>
+  <path d="M3 13 Q10 8 17 12 T29 11" stroke="#7ee8c0" stroke-width="1" fill="none" stroke-linecap="round" opacity=".6"/>
+  <path d="M2 25 L8 15 L11 19 L16 11 L21 18 L24 15 L30 25 Z" fill="#9fb6cc"/>
+  <path d="M13.5 15.5 L16 11 L18.5 15 L17 14.5 L16 15.8 L15 14.5 Z" fill="#f5f7fa"/>
+  <path d="M2 25h28v4H2Z" fill="#2b4a6b"/>
+  <path d="M4 27.2h24" stroke="#4e7aa3" stroke-width=".8" stroke-dasharray="2 1.5"/>
+</svg>

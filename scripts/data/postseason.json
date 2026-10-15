@@ -1,0 +1,45 @@
+{
+ "_": "Each club's postseason for the season in hand — the rounds, their dates and the final's site — shown in the Teams view as 'if they qualify' until the real games arrive (the schedules flag those playoff: true, and a round with a real game in its window gives way to it). Hand-kept: update each season from the leagues' announcements. tbd: true marks a round whose dates are the usual calendar, not yet announced. Drafted 2026-10-14 (Anchorage): the Robertson Cup from the NAHL's usual April–May calendar; the Seawolves play as an independent, so only the NCAA tournament (an at-large bid) is listed.",
+ "wolverines": {
+  "season": "2026–27",
+  "rounds": [
+   {
+    "name": "Robertson Cup Playoffs, division semifinals",
+    "start": "2027-04-16",
+    "end": "2027-04-21",
+    "tbd": true
+   },
+   {
+    "name": "Division finals",
+    "start": "2027-04-23",
+    "end": "2027-04-28",
+    "tbd": true
+   },
+   {
+    "name": "Robertson Cup Championship",
+    "start": "2027-05-13",
+    "end": "2027-05-17",
+    "tbd": true,
+    "final": true
+   }
+  ]
+ },
+ "seawolves": {
+  "season": "2026–27",
+  "rounds": [
+   {
+    "name": "NCAA regionals",
+    "start": "2027-03-25",
+    "end": "2027-03-28",
+    "tbd": true
+   },
+   {
+    "name": "Frozen Four",
+    "start": "2027-04-08",
+    "end": "2027-04-10",
+    "tbd": true,
+    "final": true
+   }
+  ]
+ }
+}
