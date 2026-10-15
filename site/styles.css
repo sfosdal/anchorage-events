@@ -19,6 +19,7 @@
      hues, less glare, so the stripes and ticks read after the titles */
   --v-sullivan: #9e442e; --v-aac: #9e7c2e; --v-egan: #889e2e; --v-denaina: #509e2e; --v-atwood: #2e9e44; --v-discovery: #2e9e7c;
   --v-sydney: #2e889e; --v-avis: #2e509e; --v-koots: #442e9e; --v-grandstand: #7c2e9e; --v-borealis: #9e2e88; --v-menard: #9e2e50;
+  --v-beartooth: #9e5e2e; --v-49th: #6e9e2e; --v-mulcahy: #2e9e5e;
   --venue-text: 72%;     /* how much of the venue hue the card's venue label keeps (light mode) */
   --tint: 26%;           /* the venue wash behind each card (light mode; 13% in the dark palette) */
   /* event-type hues (calendar ticks, agenda right edge): concerts salmon and
@@ -75,6 +76,7 @@
   --line: #333f4a; --gold: #f08a33; --gold-soft: #3a2a1a;
   --v-sullivan: #ea9a86; --v-aac: #eacc86; --v-egan: #d6ea86; --v-denaina: #a4ea86; --v-atwood: #86ea9a; --v-discovery: #86eacc;
   --v-sydney: #86d6ea; --v-avis: #86a4ea; --v-koots: #9a86ea; --v-grandstand: #cc86ea; --v-borealis: #ea86d6; --v-menard: #ea86a4;
+  --v-beartooth: #eab486; --v-49th: #b4ea86; --v-mulcahy: #86eab4;
   --venue-text: 100%; --tint: 13%;
   --t-concert: #f0806a; --t-sports: #f2d21b; --t-arts: #d63a4f;
   --t-movie: #8b9db0; --t-community: #e660a8; --t-expo: #4fd1c5; --t-bar: #e3ad3c; --alert: #ff4b3e;

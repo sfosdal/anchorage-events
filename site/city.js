@@ -67,12 +67,14 @@
   //            parking, suites and season bundles the arenas list beside
   //            their events
   //   alias    the other spellings the feeds use for it, folded to this name
-  // Scouted and left out (README "Sources scouted"): Bear Tooth Theatrepub
-  // (a server-rendered Squarespace page, no feed yet), 49th State Brewing
-  // (its Events Calendar feed carries only a daily pumpkin-patch row),
-  // Williwaw Social (closed), Mulcahy Stadium (summer ball, PrestoSports
-  // ICS — a follow-up), CenterTix, the Anchorage Museum, the Alaska Native
-  // Heritage Center (walled or scripted pages).
+  //   feed     the room's own calendar, read by scripts/feeds.mjs (kinds
+  //            linked, tribe, icsfile — see there) — the rooms Ticketmaster
+  //            does not list: Bear Tooth, 49th State, Mulcahy Stadium
+  // Scouted and left out (README "Sources scouted"): Williwaw Social
+  // (closed), CenterTix, the Anchorage Museum, the Alaska Native Heritage
+  // Center (walled or scripted pages), the Alaska Airlines Center's own
+  // calendar (a class-schedule plugin, nothing exported — Ticketmaster and
+  // UAA's calendar cover it).
   var VENUES = {
     // --- Anchorage: the two arenas, the convention halls, the PAC, the campus rink, Koot's ---
     'Sullivan Arena': {
@@ -165,6 +167,36 @@
       tm: { id: 'Z7r9jZa7P4', match: 'koot', fallbackUrl: 'https://koots.com/events', exclude: /parking/i },
       alias: /koot'?s|chilkoot charlie'?s/i,
     },
+    'Bear Tooth Theatrepub': { // Spenard's theatre-pub stage: comedy, dance parties, drag, Parlor in the Round — a Squarespace page whose shows link to Eventbrite (feeds.mjs `linked`); its weekly trivia is a bar program, not an event
+      capacity: 400,
+      type: 'concert',
+      cssVar: '--v-beartooth',
+      color: '#eab486',
+      url: 'https://www.beartoothak.com/live-events',
+      icon: 'https://www.google.com/s2/favicons?domain=www.beartoothak.com&sz=128',
+      feed: { kind: 'linked', url: 'https://www.beartoothak.com/live-events', match: /eventbrite\.com\/e\//, at: /bear ?tooth/i, drop: /trivia/i },
+      alias: /bear ?tooth/i,
+    },
+    '49th State Brewing': { // the brewery's stage downtown — its Events Calendar feed carries a daily pumpkin-patch row (dropped) and, when there is one, a show
+      capacity: 300,
+      type: 'concert',
+      cssVar: '--v-49th',
+      color: '#b4ea86',
+      url: 'https://49thstatebrewing.com/events/',
+      icon: 'https://www.google.com/s2/favicons?domain=49thstatebrewing.com&sz=128',
+      feed: { kind: 'tribe', url: 'https://49thstatebrewing.com/wp-json/tribe/events/v1/events', drop: /pumpkin patch/i },
+      alias: /49th state/i,
+    },
+    'Mulcahy Stadium': { // the Alaska Baseball League's Anchorage ground (the Bucs and the Glacier Pilots, June–August): the league's PrestoSports calendar, every game, kept to this ground
+      capacity: 3500,
+      type: 'sports',
+      cssVar: '--v-mulcahy',
+      color: '#86eab4',
+      url: 'https://alaskabaseballleague.org/composite',
+      icon: 'https://www.google.com/s2/favicons?domain=alaskabaseballleague.org&sz=128',
+      feed: { kind: 'icsfile', url: 'https://alaskabaseballleague.org/composite?print=ical', rooms: /mulcahy/i, type: 'sports', rename: [[/^\(Baseball\)\s*/, ''], [/\s*\(\d+-\d+\)\s*$/, '']] },
+      alias: /mulcahy/i,
+    },
     // --- the Mat-Su Valley: the fairgrounds in Palmer, the Menard Center in Wasilla ---
     'Alaska State Fair Grandstand': {
       capacity: 6000,
@@ -201,8 +233,18 @@
     },
   };
 
+  // City-wide feeds (scripts/feeds.mjs): listings that name their room,
+  // folded onto the rows above by alias. UAA's Sidearm calendar lists every
+  // Seawolves team, home and away; `rooms` keeps the Alaska Airlines Center
+  // dates — basketball, volleyball, gymnastics, none on Ticketmaster. Hockey
+  // stays with Ticketmaster (the listing) and ESPN (the Teams view).
+  var FEEDS = [
+    { kind: 'icsfile', label: 'UAA Seawolves', url: 'https://goseawolves.com/calendar.ashx/calendar.ics', rooms: /alaska airlines center/i, type: 'sports',
+      rename: [[/^\[[A-Z]\]\s*/, ''], [/^University of Alaska Anchorage /, 'UAA ']] },
+  ];
+
   // The usual view: every room on — nothing here lists nightly bar programs
-  var DEFAULT_ON = ['Sullivan Arena', 'Alaska Airlines Center', 'Egan Center', "Dena'ina Center", 'Atwood Concert Hall', 'Discovery Theatre', 'Sydney Laurence Theatre', 'Avis Alaska Sports Complex', "Koot's", 'Alaska State Fair Grandstand', 'Borealis Theatre', 'Menard Center'];
+  var DEFAULT_ON = ['Sullivan Arena', 'Alaska Airlines Center', 'Egan Center', "Dena'ina Center", 'Atwood Concert Hall', 'Discovery Theatre', 'Sydney Laurence Theatre', 'Avis Alaska Sports Complex', "Koot's", 'Bear Tooth Theatrepub', '49th State Brewing', 'Mulcahy Stadium', 'Alaska State Fair Grandstand', 'Borealis Theatre', 'Menard Center'];
   var DEFAULT_OFF = [];
   var PREFS_KNOWN_FROM = null; // no default-off venue yet, so nothing for saved prefs to be told about
 
@@ -220,20 +262,22 @@
   // order and a code is a bitmask over it, so the list is APPEND-ONLY —
   // adding an entry adds a bit and every existing code keeps meaning what
   // it meant; removing or reordering one changes every link out there.
-  // 22 slots from the first build: 5 base-36 digits.
+  // 22 slots from the first build, 25 since the three fed rooms of
+  // 2026-10-15 (appended): 5 base-36 digits.
   var CODE_LENGTH = 5;
   var REGISTRY = [
     ['venue', 'Sullivan Arena'], ['venue', 'Alaska Airlines Center'], ['venue', 'Egan Center'], ['venue', "Dena'ina Center"], ['venue', 'Atwood Concert Hall'], ['venue', 'Discovery Theatre'], ['venue', 'Sydney Laurence Theatre'], ['venue', 'Avis Alaska Sports Complex'], ['venue', "Koot's"], ['venue', 'Alaska State Fair Grandstand'], ['venue', 'Borealis Theatre'], ['venue', 'Menard Center'],
     ['badge', 'concert'], ['badge', 'sports'], ['badge', 'arts'], ['badge', 'community'],
     ['team', 'wolverines'], ['team', 'seawolves'],
     ['cap', 'stadium'], ['cap', 'arena'], ['cap', 'hall'], ['cap', 'room'],
+    ['venue', 'Bear Tooth Theatrepub'], ['venue', '49th State Brewing'], ['venue', 'Mulcahy Stadium'], // 2026-10-15
   ];
 
   // The words the page uses for the place
   var WORDS = {
     teamCity: 'Anchorage', // the board drops it from the clubs' names ("Anchorage Wolverines" → Wolverines)
     presetDefault: 'Every room — the Sullivan, the Alaska Airlines Center, the convention halls, the Performing Arts Center, the Valley — every team and type',
-    presetNeighborhood: 'Anchorage proper only — the arenas, the halls, the PAC, the campus rink and Koot\'s',
+    presetNeighborhood: 'Anchorage proper only — the arenas, the halls, the PAC, the campus rink, the ballpark, Koot\'s, Bear Tooth and 49th State',
     presetBig: 'Only the places that hold 2,000 or more — the arenas, the convention halls, the Atwood and the fair stages',
     phrases: { all: 'Showing everything.', none: 'Showing nothing yet — open Filter and pick some venues.', neighborhood: 'Showing Anchorage proper only.', big: 'Showing the big rooms only — the arenas, the convention halls, the Atwood and the fair stages.' },
   };
@@ -277,6 +321,7 @@
       desc: 'Upcoming events in Anchorage\, AK — the Sullivan Arena\, the Alaska Airlines Center\, the Egan and Dena\'ina centers\, the Performing Arts Center and the Mat-Su Valley' },
     teams: TEAMS,
     venues: VENUES,
+    feeds: FEEDS,
     defaultOn: DEFAULT_ON,
     defaultOff: DEFAULT_OFF,
     prefsKnownFrom: PREFS_KNOWN_FROM,

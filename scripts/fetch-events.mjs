@@ -20,6 +20,7 @@ import { mergeWithArchive, unionArchives, eventKey } from './merge.mjs';
 import { calmTitle, isNotice } from './titles.mjs';
 import { applySchedules } from './schedules.mjs';
 import { slugify, BADGE_FEEDS, TEAMS, CITY } from './badges.mjs';
+import { feedSources, emptyListGate } from './feeds.mjs';
 
 const JSON_OUT = new URL('../site/events.json', import.meta.url);
 const ICS_OUT = new URL('../site/events.ics', import.meta.url);
@@ -127,7 +128,9 @@ async function ticketmasterVenue({ venueId, venueMatch, label, fallbackUrl, excl
 }
 const ticketmasterRooms = Object.entries(CITY.venues).filter(([, v]) => v.tm)
   .map(([label, v]) => () => ticketmasterVenue({ venueId: v.tm.id, venueMatch: v.tm.match, label, fallbackUrl: v.tm.fallbackUrl, exclude: v.tm.exclude }));
-const sources = [...ticketmasterRooms];
+// Rooms with their own calendar (city.js `feed`: Bear Tooth's Eventbrite links, 49th State's Events Calendar,
+// the ABL's PrestoSports season at Mulcahy) and the city-wide UAA calendar (city.js `feeds`) come through feeds.mjs
+const sources = [...ticketmasterRooms, ...feedSources(CITY, BROWSER_UA)];
 // Secondary sources re-list shows the primaries carry under other titles;
 // anything at an already-taken venue/date/time is dropped. None yet.
 const secondary = [];
@@ -178,6 +181,10 @@ const fresh = all
   .filter((e) => !isNotice(e.title)) // a closure or construction notice is information, not an event
   .map((e) => ({ ...e, title: calmTitle(e.title) })) // shouted titles come down to Title Case
   .filter((e) => { const k = eventKey(e); if (seen.has(k)) return false; seen.add(k); return true; }); // venue|title|date|clock (merge.mjs): a second showing on one day is kept
+
+// the empty-list gate (feeds.mjs): nothing upcoming in this build's own pull means a room was
+// missed in scouting or every source is down — not a fact about the town. ALLOW_EMPTY_LIST=1 overrides.
+if (!emptyListGate(fresh, today, sources.length)) process.exit(1);
 
 // carry past events forward. Two copies of the archive: the live feed and
 // the `archive` branch's file (every past event ever published; the workflow
