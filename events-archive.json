@@ -23,6 +23,22 @@
    "time": "16:00:00",
    "url": "https://tickets.anchoragewolverines.com/",
    "type": "sports"
+  },
+  {
+   "venue": "Bear Tooth Theatrepub",
+   "title": "Parlor In The Round",
+   "date": "2026-10-15",
+   "time": "18:30",
+   "url": "https://www.eventbrite.com/e/parlor-in-the-round-tickets-1994714434570",
+   "type": "concert"
+  },
+  {
+   "venue": "Alaska Airlines Center",
+   "title": "UAA Women's Volleyball vs Northwest Nazarene - Pink Night, presented by Aurora Integrated Oncology Foundation",
+   "date": "2026-10-15",
+   "time": "19:00",
+   "url": "https://goseawolves.com/calendar.aspx?game_id=8000&sport_id=12",
+   "type": "sports"
   }
  ]
 }
