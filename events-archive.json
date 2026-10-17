@@ -39,6 +39,27 @@
    "time": "19:00",
    "url": "https://goseawolves.com/calendar.aspx?game_id=8000&sport_id=12",
    "type": "sports"
+  },
+  {
+   "venue": "Avis Alaska Sports Complex",
+   "title": "University of Alaska Anchorage Seawolves Hockey vs. Lake Superior State Lakers Hockey",
+   "date": "2026-10-16",
+   "time": "18:00:00",
+   "url": "https://goseawolves.com/sports/mens-ice-hockey/schedule",
+   "type": "sports",
+   "watch": {
+    "tv": [
+     "YouTube"
+    ]
+   }
+  },
+  {
+   "venue": "Alaska Airlines Center",
+   "title": "Harlem Globetrotters",
+   "date": "2026-10-16",
+   "time": "19:00:00",
+   "url": "https://thealaskaairlinescenter.com/events",
+   "type": "sports"
   }
  ]
 }
