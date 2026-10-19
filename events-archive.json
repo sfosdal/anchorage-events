@@ -97,6 +97,24 @@
    "time": "19:00:00",
    "url": "https://tickets.anchoragewolverines.com/",
    "type": "sports"
+  },
+  {
+   "venue": "Bear Tooth Theatrepub",
+   "title": "Jams For Fams Halloween",
+   "date": "2026-10-18",
+   "time": "10:00",
+   "url": "https://www.eventbrite.com/e/jams-for-fams-halloween-tickets-1999619936057",
+   "soldOut": true,
+   "type": "concert"
+  },
+  {
+   "venue": "Bear Tooth Theatrepub",
+   "title": "Jams For Fams Halloween",
+   "date": "2026-10-18",
+   "time": "13:00",
+   "url": "https://www.eventbrite.com/e/jams-for-fams-halloween-tickets-2000322296837",
+   "soldOut": true,
+   "type": "concert"
   }
  ]
 }
