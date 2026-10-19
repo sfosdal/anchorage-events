@@ -104,6 +104,7 @@
    "date": "2026-10-18",
    "time": "10:00",
    "url": "https://www.eventbrite.com/e/jams-for-fams-halloween-tickets-1999619936057",
+   "soldOut": true,
    "type": "concert"
   },
   {
@@ -112,7 +113,6 @@
    "date": "2026-10-18",
    "time": "13:00",
    "url": "https://www.eventbrite.com/e/jams-for-fams-halloween-tickets-2000322296837",
-   "soldOut": true,
    "type": "concert"
   }
  ]
