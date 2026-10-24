@@ -122,6 +122,22 @@
    "time": "19:30:00",
    "url": "https://www.ticketmaster.com/thursday-night-fightsboxing-anchorage-alaska-10-22-2026/event/0F006523B41EAE5B",
    "type": "sports"
+  },
+  {
+   "venue": "Bear Tooth Theatrepub",
+   "title": "Vitamin Come(D)y: Beth Stelling",
+   "date": "2026-10-23",
+   "time": "19:00",
+   "url": "https://www.eventbrite.com/e/vitamin-comedy-beth-stelling-tickets-1998453361802",
+   "type": "concert"
+  },
+  {
+   "venue": "Egan Center",
+   "title": "APOA presents, Ricochet",
+   "date": "2026-10-23",
+   "time": "19:30:00",
+   "url": "https://www.ticketmaster.com/apoa-presents-ricochet-anchorage-alaska-10-23-2026/event/0F006542BEA5B8BA",
+   "type": "concert"
   }
  ]
 }
