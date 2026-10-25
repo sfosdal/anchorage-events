@@ -138,6 +138,14 @@
    "time": "19:30:00",
    "url": "https://www.ticketmaster.com/apoa-presents-ricochet-anchorage-alaska-10-23-2026/event/0F006542BEA5B8BA",
    "type": "concert"
+  },
+  {
+   "venue": "Sullivan Arena",
+   "title": "Anchorage Wolverines vs Kenai River Brown Bears",
+   "date": "2026-10-24",
+   "time": "19:00:00",
+   "url": "https://tickets.anchoragewolverines.com/",
+   "type": "sports"
   }
  ]
 }
