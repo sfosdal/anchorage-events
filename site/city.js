@@ -291,10 +291,10 @@
   // The words the page uses for the place
   var WORDS = {
     teamCity: 'Anchorage', // the board drops it from the clubs' names ("Anchorage Wolverines" → Wolverines)
-    presetDefault: 'Every room — the Sullivan, the Alaska Airlines Center, the convention halls, the Performing Arts Center, the Valley — every team and type',
+    presetDefault: 'Every venue — the Sullivan, the Alaska Airlines Center, the convention halls, the Performing Arts Center, the Valley — every team and type',
     presetNeighborhood: 'Anchorage proper only — the arenas, the halls, the PAC, the campus rink, the ballpark, Koot\'s, Bear Tooth and 49th State',
     presetBig: 'Only the places that hold 2,000 or more — the arenas, the convention halls, the Atwood and the fair stages',
-    phrases: { all: 'Showing everything.', none: 'Showing nothing yet — open Filter and pick some venues.', neighborhood: 'Showing Anchorage proper only.', big: 'Showing the big rooms only — the arenas, the convention halls, the Atwood and the fair stages.' },
+    phrases: { all: 'Showing everything.', none: 'Showing nothing yet — open Filter and pick some venues.', neighborhood: 'Showing Anchorage proper only.', big: 'Showing the big venues only — the arenas, the convention halls, the Atwood and the fair stages.' },
   };
 
   // Alaska's public holidays (app.js holidaysFor reads this instead of its
