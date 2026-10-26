@@ -78,6 +78,7 @@
   var VENUES = {
     // --- Anchorage: the two arenas, the convention halls, the PAC, the campus rink, Koot's ---
     'Sullivan Arena': {
+      geo: [61.20439, -149.87342],
       capacity: 8751,
       type: 'sports',
       cssVar: '--v-sullivan',
@@ -88,6 +89,7 @@
       alias: /sullivan arena|george m\.? sullivan/i,
     },
     'Alaska Airlines Center': {
+      geo: [61.18859, -149.81418],
       capacity: 5000,
       type: 'sports',
       cssVar: '--v-aac',
@@ -98,6 +100,7 @@
       alias: /alaska airlines (center|arena)/i,
     },
     'Egan Center': {
+      geo: [61.21758, -149.89254],
       capacity: 2540,
       type: 'community',
       cssVar: '--v-egan',
@@ -108,6 +111,7 @@
       alias: /egan (civic and convention )?center|william a\.? egan/i,
     },
     "Dena'ina Center": {
+      geo: [61.21528, -149.89454],
       capacity: 5000,
       type: 'community',
       cssVar: '--v-denaina',
@@ -118,6 +122,7 @@
       alias: /dena'?ina (civic and convention )?center/i,
     },
     'Atwood Concert Hall': {
+      geo: [61.21706, -149.89435],
       capacity: 2000,
       type: 'arts',
       cssVar: '--v-atwood',
@@ -128,6 +133,7 @@
       alias: /atwood (concert )?hall/i,
     },
     'Discovery Theatre': {
+      geo: [61.21645, -149.8948],
       capacity: 700,
       type: 'arts',
       cssVar: '--v-discovery',
@@ -138,6 +144,7 @@
       alias: /discovery theat(er|re)/i,
     },
     'Sydney Laurence Theatre': {
+      geo: [61.2169, -149.86819],
       capacity: 340,
       type: 'arts',
       cssVar: '--v-sydney',
@@ -148,6 +155,7 @@
       alias: /sydney laurence/i,
     },
     'Avis Alaska Sports Complex': { // UAA's own rink (the Seawolf Sports Complex until 2022); the hockey link-outs
+      geo: [61.198, -149.81149],
       capacity: 800,
       type: 'sports',
       cssVar: '--v-avis',
@@ -158,6 +166,7 @@
       alias: /avis alaska|seawolf sports complex/i,
     },
     "Koot's": { // Chilkoot Charlie's in Spenard; its own site is a scripted Supabase page, so Ticketmaster alone
+      geo: [61.1877, -149.88901],
       capacity: 1000,
       type: 'concert',
       cssVar: '--v-koots',
@@ -168,6 +177,7 @@
       alias: /koot'?s|chilkoot charlie'?s/i,
     },
     'Bear Tooth Theatrepub': { // Spenard's theatre-pub stage: comedy, dance parties, drag, Parlor in the Round — a Squarespace page whose shows link to Eventbrite (feeds.mjs `linked`); its weekly trivia is a bar program, not an event
+      geo: [61.19584, -149.90727],
       capacity: 400,
       type: 'concert',
       cssVar: '--v-beartooth',
@@ -178,6 +188,7 @@
       alias: /bear ?tooth/i,
     },
     '49th State Brewing': { // the brewery's stage downtown — its Events Calendar feed carries a daily pumpkin-patch row (dropped) and, when there is one, a show
+      geo: [61.17389, -149.98264],
       capacity: 300,
       type: 'concert',
       cssVar: '--v-49th',
@@ -188,6 +199,7 @@
       alias: /49th state/i,
     },
     'Mulcahy Stadium': { // the Alaska Baseball League's Anchorage ground (the Bucs and the Glacier Pilots, June–August): the league's PrestoSports calendar, every game, kept to this ground
+      geo: [61.2068, -149.8775],
       capacity: 3500,
       type: 'sports',
       cssVar: '--v-mulcahy',
@@ -199,6 +211,7 @@
     },
     // --- the Mat-Su Valley: the fairgrounds in Palmer, the Menard Center in Wasilla ---
     'Alaska State Fair Grandstand': {
+      geo: [61.58016, -149.13054],
       capacity: 6000,
       area: 'town',
       type: 'concert',
@@ -210,6 +223,7 @@
       alias: /(alaska state fair )?grandstand/i,
     },
     'Borealis Theatre': {
+      geo: [61.58016, -149.13054],
       capacity: 2200,
       area: 'town',
       type: 'concert',
@@ -221,6 +235,7 @@
       alias: /borealis theat(er|re)/i,
     },
     'Menard Center': { // the Curtis D. Menard Memorial Sports Center, Wasilla
+      geo: [61.57192, -149.51719],
       capacity: 5000,
       area: 'town',
       type: 'community',
@@ -320,6 +335,18 @@
     ics: { name: 'Anchorage Events', short: 'Anchorage Events', teams: 'Anchorage home teams — every season', prodid: '-//here.events//anchorage-events//EN', uidDomain: 'fosdal.net', // the UID domain the whole family issues (the shared ics test pins it)
       desc: 'Upcoming events in Anchorage\, AK — the Sullivan Arena\, the Alaska Airlines Center\, the Egan and Dena\'ina centers\, the Performing Arts Center and the Mat-Su Valley' },
     teams: TEAMS,
+    map: { // the Map view (local-map.js; the ground drawn once by scripts/build-local-map.mjs from OpenStreetMap, committed as site/local-map.json) — every city gets one, Steve, 2026-10-26
+      kind: 'urban',
+      bbox: [61.113, -150.11, 61.641, -149.003], // south, west, north, east — every room, with a margin
+      home: [61.163, -150.025, 61.229, -149.769], // the view at first: the city's own rooms; the fit button shows the whole frame
+      roads: ['motorway', 'trunk', 'primary'],
+      tolerance: 0.8,
+      labels: [
+        { name: 'Anchorage', lat: 61.218, lon: -149.9, anchor: 'middle' },
+        { name: 'Palmer', lat: 61.59957, lon: -149.11109, anchor: 'middle' },
+        { name: 'Wasilla', lat: 61.58242, lon: -149.44256, anchor: 'middle' },
+      ],
+    },
     venues: VENUES,
     feeds: FEEDS,
     defaultOn: DEFAULT_ON,
