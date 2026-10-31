@@ -154,6 +154,30 @@
    "time": "19:30:00",
    "url": "https://www.ticketmaster.com/thursday-night-fightsboxing-anchorage-alaska-10-29-2026/event/0F006523B420AE63",
    "type": "sports"
+  },
+  {
+   "venue": "Alaska Airlines Center",
+   "title": "UAA Women's Volleyball vs Alaska Fairbanks - Trick-or-Treat with the Seawolves, presented by Gci",
+   "date": "2026-10-30",
+   "time": "19:00",
+   "url": "https://goseawolves.com/calendar.aspx?game_id=8004&sport_id=12",
+   "type": "sports"
+  },
+  {
+   "venue": "Sullivan Arena",
+   "title": "Anchorage Wolverines vs Kenai River Brown Bears",
+   "date": "2026-10-30",
+   "time": "19:00:00",
+   "url": "https://tickets.anchoragewolverines.com/",
+   "type": "sports"
+  },
+  {
+   "venue": "Bear Tooth Theatrepub",
+   "title": "Season Of The Witch Dance Party",
+   "date": "2026-10-30",
+   "time": "20:00",
+   "url": "https://www.eventbrite.com/e/season-of-the-witch-dance-party-tickets-2002091311006",
+   "type": "concert"
   }
  ]
 }
