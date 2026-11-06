@@ -105,9 +105,7 @@
       type: 'community',
       cssVar: '--v-egan',
       color: '#d6ea86',
-      url: 'https://anchorageconventioncenters.com/events/',
-      icon: 'https://www.google.com/s2/favicons?domain=anchorageconventioncenters.com&sz=128',
-      tm: { id: 'KovZpZAdE17A', match: 'egan', fallbackUrl: 'https://anchorageconventioncenters.com/events/', exclude: /parking|\btours?\b/i },
+      tm: { id: 'KovZpZAdE17A', match: 'egan', exclude: /parking|\btours?\b/i },
       alias: /egan (civic and convention )?center|william a\.? egan/i,
     },
     "Dena'ina Center": {
@@ -116,9 +114,7 @@
       type: 'community',
       cssVar: '--v-denaina',
       color: '#a4ea86',
-      url: 'https://anchorageconventioncenters.com/events/',
-      icon: 'https://www.google.com/s2/favicons?domain=anchorageconventioncenters.com&sz=128',
-      tm: { id: 'KovZpa4see', match: 'dena', fallbackUrl: 'https://anchorageconventioncenters.com/events/', exclude: /parking|\btours?\b/i },
+      tm: { id: 'KovZpa4see', match: 'dena', exclude: /parking|\btours?\b/i },
       alias: /dena'?ina (civic and convention )?center/i,
     },
     'Atwood Concert Hall': {
