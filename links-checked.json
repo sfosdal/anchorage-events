@@ -3,7 +3,6 @@
   "https://alaskapac.org/events": "2026-11-05",
   "https://centertix.com/events/maria-bamford": "2026-11-05",
   "https://goseawolves.com/calendar.aspx?game_id=8006&sport_id=12": "2026-11-05",
-  "https://goseawolves.com/calendar.aspx?game_id=8047&sport_id=7": "2026-11-05",
   "https://goseawolves.com/calendar.aspx?game_id=8048&sport_id=7": "2026-11-05",
   "https://goseawolves.com/calendar.aspx?game_id=8052&sport_id=7": "2026-11-05",
   "https://goseawolves.com/calendar.aspx?game_id=8053&sport_id=7": "2026-11-05",
@@ -23,7 +22,6 @@
   "https://goseawolves.com/calendar.aspx?game_id=8074&sport_id=7": "2026-11-05",
   "https://goseawolves.com/calendar.aspx?game_id=8077&sport_id=7": "2026-11-05",
   "https://goseawolves.com/calendar.aspx?game_id=8078&sport_id=7": "2026-11-05",
-  "https://goseawolves.com/calendar.aspx?game_id=8092&sport_id=2": "2026-11-05",
   "https://goseawolves.com/calendar.aspx?game_id=8093&sport_id=2": "2026-11-05",
   "https://goseawolves.com/calendar.aspx?game_id=8100&sport_id=2": "2026-11-05",
   "https://goseawolves.com/calendar.aspx?game_id=8101&sport_id=2": "2026-11-05",
@@ -42,5 +40,18 @@
   "https://tickets.anchoragewolverines.com/": "2026-11-05",
   "https://www.alaskapac.org": "2026-11-05",
   "https://www.beartoothak.com/live-events": "2026-11-05"
+ },
+ "guard": {
+  "https://alaskapac.org/events": "2026-11-07",
+  "https://centertix.com/": "2026-11-07",
+  "https://goseawolves.com/sports/mens-ice-hockey/schedule": "2026-11-07",
+  "https://koots.com/events": "2026-11-07",
+  "https://matsu.gov/": "2026-11-07",
+  "https://thealaskaairlinescenter.com/events-tickets/calendar/": "2026-11-07",
+  "https://tickets.anchoragewolverines.com/": "2026-11-07",
+  "https://www.49thstatebrewing.com/calendar/": "2026-11-07",
+  "https://www.alaskastatefair.org/site/concerts/": "2026-11-07",
+  "https://www.anchoragewolverines.com/schedule/": "2026-11-07",
+  "https://www.beartoothak.com/live-events": "2026-11-07"
  }
 }

@@ -58,7 +58,7 @@
    "title": "Harlem Globetrotters",
    "date": "2026-10-16",
    "time": "19:00:00",
-   "url": "https://thealaskaairlinescenter.com/events",
+   "url": "https://thealaskaairlinescenter.com/events-tickets/calendar/",
    "type": "sports"
   },
   {
@@ -66,7 +66,7 @@
    "title": "Harlem Globetrotters",
    "date": "2026-10-17",
    "time": "14:00:00",
-   "url": "https://thealaskaairlinescenter.com/events",
+   "url": "https://thealaskaairlinescenter.com/events-tickets/calendar/",
    "type": "sports"
   },
   {
@@ -185,6 +185,30 @@
    "date": "2026-11-05",
    "time": "19:00",
    "url": "https://goseawolves.com/calendar.aspx?game_id=8005&sport_id=12",
+   "type": "sports"
+  },
+  {
+   "venue": "Alaska Airlines Center",
+   "title": "UAA Men's Basketball vs Evergreen State - Slam Dunk Into Higher Education, presented by Premera",
+   "date": "2026-11-06",
+   "time": "11:00",
+   "url": "https://goseawolves.com/calendar.aspx?game_id=8092&sport_id=2",
+   "type": "sports"
+  },
+  {
+   "venue": "Alaska Airlines Center",
+   "title": "UAA Women's Basketball vs College of Idaho",
+   "date": "2026-11-06",
+   "time": "19:00",
+   "url": "https://goseawolves.com/calendar.aspx?game_id=8047&sport_id=7",
+   "type": "sports"
+  },
+  {
+   "venue": "Sullivan Arena",
+   "title": "Anchorage Wolverines vs Minnesota Mallards",
+   "date": "2026-11-06",
+   "time": "19:00:00",
+   "url": "https://tickets.anchoragewolverines.com/",
    "type": "sports"
   }
  ]
