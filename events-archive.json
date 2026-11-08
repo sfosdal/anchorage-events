@@ -210,6 +210,46 @@
    "time": "19:00:00",
    "url": "https://tickets.anchoragewolverines.com/",
    "type": "sports"
+  },
+  {
+   "venue": "Alaska Airlines Center",
+   "title": "UAA Women's Basketball vs College of Idaho",
+   "date": "2026-11-07",
+   "time": "14:00",
+   "url": "https://goseawolves.com/calendar.aspx?game_id=8048&sport_id=7",
+   "type": "sports"
+  },
+  {
+   "venue": "Alaska Airlines Center",
+   "title": "UAA Men's Basketball vs Evergreen State",
+   "date": "2026-11-07",
+   "time": "16:15",
+   "url": "https://goseawolves.com/calendar.aspx?game_id=8093&sport_id=2",
+   "type": "sports"
+  },
+  {
+   "venue": "Sullivan Arena",
+   "title": "Anchorage Wolverines vs Minnesota Mallards",
+   "date": "2026-11-07",
+   "time": "19:00:00",
+   "url": "https://tickets.anchoragewolverines.com/",
+   "type": "sports"
+  },
+  {
+   "venue": "Alaska Airlines Center",
+   "title": "UAA Women's Volleyball vs Western Oregon - Senior Night",
+   "date": "2026-11-07",
+   "time": "19:15",
+   "url": "https://goseawolves.com/calendar.aspx?game_id=8006&sport_id=12",
+   "type": "sports"
+  },
+  {
+   "venue": "Bear Tooth Theatrepub",
+   "title": "Legacy: A Drag Experience featuring Jaida Essence Hall",
+   "date": "2026-11-07",
+   "time": "20:00",
+   "url": "https://www.eventbrite.com/e/legacy-a-drag-experience-featuring-jaida-essence-hall-tickets-2001079428438",
+   "type": "concert"
   }
  ]
 }
