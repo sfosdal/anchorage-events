@@ -288,6 +288,22 @@
     "checked": "2026-11-17T00:14:19.484Z",
     "from": 25.25
    }
+  },
+  {
+   "venue": "Bear Tooth Theatrepub",
+   "title": "Vitamin Come(D)y: Sam Miller",
+   "date": "2026-11-20",
+   "time": "19:00",
+   "url": "https://www.eventbrite.com/e/vitamin-comedy-sam-miller-tickets-1999061680299",
+   "type": "concert"
+  },
+  {
+   "venue": "Sullivan Arena",
+   "title": "Anchorage Wolverines vs Springfield Jr. Blues",
+   "date": "2026-11-20",
+   "time": "19:00:00",
+   "url": "https://tickets.anchoragewolverines.com/",
+   "type": "sports"
   }
  ]
 }
