@@ -304,6 +304,30 @@
    "time": "19:00:00",
    "url": "https://tickets.anchoragewolverines.com/",
    "type": "sports"
+  },
+  {
+   "venue": "Alaska Airlines Center",
+   "title": "UAA Women's Basketball vs Seattle vs Chicago State",
+   "date": "2026-11-21",
+   "time": "17:15",
+   "url": "https://goseawolves.com/calendar.aspx?game_id=8052&sport_id=7",
+   "type": "sports"
+  },
+  {
+   "venue": "Sullivan Arena",
+   "title": "Anchorage Wolverines vs Springfield Jr. Blues",
+   "date": "2026-11-21",
+   "time": "19:00:00",
+   "url": "https://tickets.anchoragewolverines.com/",
+   "type": "sports"
+  },
+  {
+   "venue": "Alaska Airlines Center",
+   "title": "UAA Women's Basketball vs Louisville",
+   "date": "2026-11-21",
+   "time": "19:30",
+   "url": "https://goseawolves.com/calendar.aspx?game_id=8053&sport_id=7",
+   "type": "sports"
   }
  ]
 }
