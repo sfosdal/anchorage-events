@@ -328,6 +328,22 @@
    "time": "19:30",
    "url": "https://goseawolves.com/calendar.aspx?game_id=8053&sport_id=7",
    "type": "sports"
+  },
+  {
+   "venue": "Alaska Airlines Center",
+   "title": "UAA Women's Basketball vs Seattle vs #3 Louisville (title game)",
+   "date": "2026-11-22",
+   "time": "14:00",
+   "url": "https://goseawolves.com/calendar.aspx?game_id=8054&sport_id=7",
+   "type": "sports"
+  },
+  {
+   "venue": "Alaska Airlines Center",
+   "title": "UAA Women's Basketball vs Chicago State (3rd-place game)",
+   "date": "2026-11-22",
+   "time": "16:30",
+   "url": "https://goseawolves.com/calendar.aspx?game_id=8055&sport_id=7",
+   "type": "sports"
   }
  ]
 }
